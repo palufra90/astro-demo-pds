@@ -15,7 +15,7 @@
 <script>
   const accordions = document.querySelectorAll('p-accordion');
   accordions.forEach((accordion) =>
-    accordion.addEventListener('update', (e) => {
+    accordion.addEventListener('update', (e:any) => {
       e.target.open = e.detail.open;
     })
   );
