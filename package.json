@@ -11,6 +11,11 @@
   "dependencies": {
     "astro": "^4.16.16",
     "@astrojs/check": "^0.9.4",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "@porsche-design-system/components-js": "3.21.0",
+    "sass": "^1.81.0"
+  },
+  "devDependencies": {
+    "@porsche-design-system/prettier-config": "^1.0.1"
   }
 }

@@ -1,0 +1,44 @@
+---
+import {
+  getComponentChunkLinks,
+  getFontLinks,
+  getInitialStyles,
+  getLoaderScript
+} from "@porsche-design-system/components-js/partials";
+
+const porscheDesignHeaders = `${getInitialStyles()}
+  ${getFontLinks()}
+  ${getComponentChunkLinks({ components: ["crest", "wordmark"] })}`;
+
+---
+
+<html lang="en">
+  <head>
+    <Fragment set:html={porscheDesignHeaders} />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <Fragment set:html={getLoaderScript()} />
+    <header class="header">
+      <p-wordmark></p-wordmark>
+    </header> 
+    <main class="main">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style lang="scss">
+  @use "@porsche-design-system/components-js/styles" as *;
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }   
+  .main {
+    @include pds-grid;
+  }
+</style>

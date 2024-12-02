@@ -1,0 +1,12 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.grid {
+  @include pds-grid;
+}
+.narrow {
+  grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+}
+
+.wide {
+  grid-column: $pds-grid-wide-column-start / $pds-grid-wide-column-end;
+}
