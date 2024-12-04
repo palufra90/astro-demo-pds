@@ -1,15 +1,17 @@
-<p-accordion heading="Some Heading" heading-tag="h3" class="narrow">
-  <p-text>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-  </p-text>
-</p-accordion>
-<p-accordion heading="Some Heading" heading-tag="h3" class="narrow">
-  <p-text>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-  </p-text>
-</p-accordion>
+---
+interface Props {
+  sections: {
+    name: string; 
+    description: string;
+  }[];
+}
+const { sections } = Astro.props;
+---
+{sections?.map((section)=> (
+  <p-accordion heading={section.name} heading-tag="h3" class="narrow">
+    <p-text>{section.description}</p-text>
+  </p-accordion>
+))}
 
 
 <script>

@@ -1,13 +1,18 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Accordion from "src/modules/Accordion/Accordion.astro";
+
+const response = await fetch('http://localhost:4321/api/models');
+const data = await response.json();
+console.log(data)
+
 ---
 <Layout>
 	<h1 class="wide">Hello Astro!</h1>
 	<div class="wide">
 		<p-button >Click me</p-button>
 	</div>
-	<Accordion></Accordion>
+	<Accordion sections={data}></Accordion>
 </Layout>
 
 
