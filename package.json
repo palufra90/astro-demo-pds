@@ -9,11 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.16",
     "@astrojs/check": "^0.9.4",
-    "typescript": "^5.7.2",
+    "@astrojs/vercel": "^8.0.0",
     "@porsche-design-system/components-js": "3.21.0",
-    "sass": "^1.81.0"
+    "astro": "^4.16.16",
+    "sass": "^1.81.0",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@porsche-design-system/prettier-config": "^1.0.1"
